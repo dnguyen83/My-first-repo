@@ -31,5 +31,7 @@ int main()
 	Data task;
 	task.get(roulette.spin(task.size()));
 	
+	printf("Hello World\n");
+
 	return 0;
 }

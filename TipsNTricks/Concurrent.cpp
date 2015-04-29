@@ -36,16 +36,16 @@ public:
 		thd.join();
 	}
 
-	template<typename F>
-	auto operator()(F func)const->std::future<decltype(func(t))>{
-		auto p = std::make_shared<std::promise<decltype(func(t))>>();
-		auto ret = p->get_future();
-		m_queue.push([=]{
-			set_value(*p, func, t);
-		});
-
-		return ret;
-	}
+//	template<typename F>
+//	auto operator()(F func)const->std::future<decltype(func(t))>{
+//		auto p = std::make_shared<std::promise<decltype(func(t))>>();
+//		auto ret = p->get_future();
+//		m_queue.push([=]{
+//			set_value(*p, func, t);
+//		});
+//
+//		return ret;
+//	}
 
 private:
 	mutable T t;
@@ -55,15 +55,15 @@ private:
 };
 
 //Example to call it
-
-int how() {
-	Concurrent<std::string> s = "start\n";
-
-	auto f = s([](std::string& s){
-		s += std::to_string(42) + " " + std::to_string(43);
-		return std::string("**** set: ") + s;
-	});
-
-	std::cout << f.get() << std::endl;
-	return 0;
-}
+//
+//int how() {
+//	Concurrent<std::string> s = "start\n";
+//
+//	auto f = s([](std::string& s){
+//		s += std::to_string(42) + " " + std::to_string(43);
+//		return std::string("**** set: ") + s;
+//	});
+//
+//	std::cout << f.get() << std::endl;
+//	return 0;
+//}

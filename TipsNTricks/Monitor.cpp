@@ -70,21 +70,21 @@ private:
 /////////////////// Herbs version using C++11
 // from: http://channel9.msdn.com/Shows/Going+Deep/C-and-Beyond-2012-Herb-Sutter-Concurrency-and-Parallelism
 
-template <class T>
-class Monitor2 {
-public:
-	Monitor2(T t = T{})
-		: m_object{ t }
-	{}
-
-	template<typename F>
-	auto operator()(F f) -> decltype(f(m_object)) {
-		CriticalS cs;
-		return f(m_object);
-	}
-private:
-	T m_object;
-};
+//template <class T>
+//class Monitor2 {
+//public:
+//	Monitor2(T t = T{})
+//		: m_object{ t }
+//	{}
+//
+//	template<typename F>
+//	auto operator()(F f) -> decltype(f(m_object)) {
+//		CriticalS cs;
+//		return f(m_object);
+//	}
+//private:
+//	T m_object;
+//};
 
 //class Producer {
 //public:

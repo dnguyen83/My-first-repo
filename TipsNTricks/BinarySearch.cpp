@@ -66,4 +66,6 @@ bool BinaryTree::doSearch(Node* node, int value) {
 	} else {
 		return false;
 	}
+    
+    return true;
 }

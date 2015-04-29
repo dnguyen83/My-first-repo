@@ -52,3 +52,17 @@ TipsNTricks/Debug/TipsNTricks.log
 *.tlog
 TipsNTricks/Debug/vc120.idb
 *.pdb
+
+*.xccheckout
+
+*.xcuserstate
+
+*.xcbkptlist
+
+*.plist
+
+*.xcworkspacedata
+
+*.xcworkspacedata
+
+*.xcscheme
